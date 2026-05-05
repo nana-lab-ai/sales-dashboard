@@ -43,6 +43,7 @@ def refresh_monthly_table():
     if products_df is None or not os.path.exists(SALES_CSV):
         return
 
+    # 売上データ CSV 読み込み
     sales_df = pd.read_csv(SALES_CSV)
     joined = pd.merge(sales_df, products_df, on="商品ID", how="left")
 

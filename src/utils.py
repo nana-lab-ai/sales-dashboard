@@ -8,7 +8,9 @@ SALES_CSV = os.path.join(BASE_DIR, "data", "sales.csv")
 
 def load_products_master():
     try:
+        # 商品マスタ CSV 読み込み
         products_df = pd.read_csv(PRODUCTS_CSV)
+        # カテゴリマスタ CSV 読み込み
         categories_df = pd.read_csv(CATEGORIES_CSV)
         products_df = pd.merge(products_df, categories_df, on="カテゴリID", how="left")
         return products_df

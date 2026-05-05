@@ -7,7 +7,7 @@ from utils import get_products_df
 
 def launch_view_mode(products_df):
     app = ctk.CTk()
-    app.title("Sakatees 売上ダッシュボード")
+    app.title("売上ダッシュボード")
     app.geometry("1000x700")
 
     tabview = ctk.CTkTabview(app)
